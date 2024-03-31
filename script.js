@@ -385,7 +385,7 @@ gsap.to(imageSeq, {
     scrub: 0.15,
     trigger: `canvas`,
     start: `top`,
-    end: `400%`,
+    end: `200%`,
     scroller: `#main`,
   },
   onUpdate: render,

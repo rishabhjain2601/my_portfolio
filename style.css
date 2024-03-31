@@ -6,65 +6,72 @@
 }
 html,
 body {
-  height: 100%;
+  height: 200vh;
   width: 100%;
+  overflow-y: scroll;
 }
 #main {
+  height: 200vh;
   position: relative;
+  z-index: 1;
   overflow: hidden;
 }
 #page {
-  position: fixed;
+  position: relative;
   justify-content: center;
-  z-index: 7;
-  height: 100vh;
+  z-index: 200;
+  height: 200vh;
   width: 100vw;
-  background-color: #a40a0a00;
+  background-color: #ba0f0f00;
 }
-#page1 {
-  position: relative;
-  height: 100vh;
-  width: 100vw;
-  background-color: rgb(0, 74, 234);
+#page0 {
+  position: absolute;
+  top: 0;
+  z-index: 210;
+  /* height: 200vh; */
+  width: 100%;
+  /* background-color: rgba(199, 232, 31, 0); */
 }
-#page2 {
-  position: relative;
-  margin-top: -100px;
-  height: 100vh;
+#page1{
+  position: absolute;
+  top: 0;
+  z-index: 70;
+  height: 200vh;
   width: 100vw;
-  background-color: #480bef;
-}
-#page3 {
-  position: relative;
-  height: 100vh;
-  width: 100vw;
-  background-color: #7e10de;
+  background: url("./Images/bg2.jpg") repeat;
+  animation: animateBg 50s linear;
 }
 
-#page4 {
-  position: relative;
-  height: 100vh;
-  width: 100vw;
-  background-color: #de1044;
+@keyframes animateBg {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
 }
-
 canvas {
   position: fixed;
   left: 70%;
-  z-index: 9;
+  z-index: 40;
   max-width: 100vw;
   max-height: 100vh;
 }
 
-.about {
+.about-me {
   position: relative;
-  margin: 10px 0px 0px 10px;
-  width: 350px;
-  padding: 10px;
-  float: left;
-  z-index: 10;
-  background: rgba(246, 246, 246, 0.448);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  z-index: 0;
+  /* margin-top: 10px; */
+  max-width: 400px;
+  margin-right: 80px;
+  left: 12%;
+  top: 10px;
+  padding: 20px;
+  opacity: 0;
+  color: rgb(187, 187, 187);
+  background-color: #ffffff16;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0);
   backdrop-filter: blur(4.5px);
   -webkit-backdrop-filter: blur(4.5px);
   border-radius: 10px;
@@ -72,21 +79,17 @@ canvas {
 
 .accordian {
   position: relative;
-  max-width: 90%;
+  max-width: 100%;
   /* height: 320px; */
   overflow: hidden;
-  z-index: 11;
-  margin: 100px auto;
-  /* box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.35);
-  -webkit-box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.35);
-  -moz-box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.35); */
+  z-index: 15;
 }
 
 .accordian li {
   position: relative;
   width: 25%;
   float: left;
-
+  z-index: 50;
   border-left: 1px solid #888;
 
   /* box-shadow: 0 0 25px 1px rgba(0, 0, 0, 0.5); */
@@ -103,17 +106,20 @@ canvas {
 }
 
 .accordian1 {
-  background: rgba(255, 255, 255, 0.448);
+  /* background: rgba(183, 183, 183, 0.448); */
   position: absolute;
+  /* display: none; */
   opacity: 0;
+  top: 115px;
   z-index: -1;
+  padding-top: 10px;
   transition: all 0.5s ease;
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
 }
 /*Reduce with of un-hovered elements*/
 .accordian ul:hover li {
-  width: 5%;
+  width: 10%;
 }
 /*Lets apply hover effects now*/
 /*The LI hover style should override the UL hover style*/
@@ -123,6 +129,11 @@ canvas {
 
 .accordian li img {
   display: block;
+  /* height: 50%; */
+  /* width: 40vw; */
+  z-index: 50;
+  position: relative;
+  height: 65vh;
 }
 
 /*Image title styles*/
@@ -141,43 +152,112 @@ canvas {
   font-size: 16px;
 }
 
-.projects {
-  max-width: 1100px;
-  height: 40%;
-}
-
 .pb {
-  width: 20vw;
+  position: fixed;
   height: 10vh;
-  border: none;
-  margin-top: 12px;
+  margin-top: 20px;
   border-radius: 10%;
   border-radius: 100px;
-  background: #d30927;
 }
-
 button {
-  position: relative;
+  position: absolute;
   z-index: 20;
-  width: 20vw;
+  width: 200px;
   height: 10vh;
   border: none;
   margin-top: 12px;
   border-radius: 10%;
   border-radius: 100px;
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.556);
+  background-color: #ffffff16;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
 }
 
 button:hover {
   cursor: pointer;
+  width: 240px;
+  height: 14vh;
+  background-color: #8a898991;
 }
 
 .pb:hover + .accordian1 {
   opacity: 1;
-  background: #cc3a504a;
   position: relative;
+  z-index: 50;
   cursor: pointer;
 }
 .accordian1:hover {
+  display: block;
   opacity: 1;
+  z-index: 50;
   position: relative;
+}
+
+.about-button:hover + .about-me {
+  opacity: 1;
+}
+
+.about-button {
+  position: absolute;
+  margin-top: 200px;
+}
+
+/* .about-me:hover {
+  opacity: 1;
+  z-index: 11;
+} */
+.components {
+  position: relative;
+  z-index: 20;
+  width: 100%;
+  height: 100vh;
+}
+.about button {
+  position: relative;
+  /* width: vw; */
+  top: 0;
+  z-index: 25;
+  margin-left: 12%;
+}
+
+.projects {
+  /* max-width: 1100px; */
+  position: fixed;
+  top: 0;
+  margin-top: 120vh;
+  margin-left: 12%;
+  z-index: 21;
+  height: 40%;
+}
+
+.skills button {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  /* margin-left: 80%; */
+  margin-right: 10%;
+  z-index: 21;
+  /* margin-top: 55vh; */
+}
+
+.contact button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  /* margin-left: 80%; */
+  margin-right: 10%;
+  z-index: 21;
+  margin-top: 140vh;
+}
+
+.hidden {
+  display: none;
+}
+
+.skill-set{
+  display: flex;
+  width: 30%;
 }
