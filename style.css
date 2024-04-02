@@ -32,7 +32,7 @@ body {
   width: 100%;
   /* background-color: rgba(199, 232, 31, 0); */
 }
-#page1{
+#page1 {
   position: absolute;
   top: 0;
   z-index: 70;
@@ -155,7 +155,7 @@ canvas {
 .pb {
   position: fixed;
   height: 10vh;
-  margin-top: 20px;
+  margin-top: 40px;
   border-radius: 10%;
   border-radius: 100px;
 }
@@ -163,7 +163,7 @@ button {
   position: absolute;
   z-index: 20;
   width: 200px;
-  height: 10vh;
+  height: 75px;
   border: none;
   margin-top: 12px;
   border-radius: 10%;
@@ -179,7 +179,7 @@ button {
 button:hover {
   cursor: pointer;
   width: 240px;
-  height: 14vh;
+  height: 85px;
   background-color: #8a898991;
 }
 
@@ -205,16 +205,6 @@ button:hover {
   margin-top: 200px;
 }
 
-/* .about-me:hover {
-  opacity: 1;
-  z-index: 11;
-} */
-.components {
-  position: relative;
-  z-index: 20;
-  width: 100%;
-  height: 100vh;
-}
 .about button {
   position: relative;
   /* width: vw; */
@@ -227,7 +217,7 @@ button:hover {
   /* max-width: 1100px; */
   position: fixed;
   top: 0;
-  margin-top: 120vh;
+  margin-top: 110vh;
   margin-left: 12%;
   z-index: 21;
   height: 40%;
@@ -235,7 +225,7 @@ button:hover {
 
 .skills button {
   position: absolute;
-  bottom: 0;
+  bottom: -20%;
   right: 0;
   /* margin-left: 80%; */
   margin-right: 10%;
@@ -245,8 +235,8 @@ button:hover {
 
 .contact button {
   position: absolute;
-  top: 0;
   right: 0;
+  bottom: -170%;
   /* margin-left: 80%; */
   margin-right: 10%;
   z-index: 21;
@@ -257,7 +247,73 @@ button:hover {
   display: none;
 }
 
-.skill-set{
+.skill-set1 {
   display: flex;
-  width: 30%;
+  margin: 2px;
+}
+.skill-set2 {
+  display: flex;
+  margin: 2px;
+  margin-left: 14%;
+}
+
+.skills-box {
+  display: block;
+  /* width: 70%; */
+  opacity: 0;
+  position: absolute;
+  max-width: min-content;
+  padding: 1%;
+  bottom: 0;  
+  right: 1%;
+  color: white;
+  background-color: #ffffff16;
+  /* box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0); */
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(4.5px);
+  border: 2px solid gray;
+  border-radius: 10px;
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+}
+.skill{
+  margin-right: 8px;
+}
+.skills{
+  margin-right: 8px;
+}
+
+.skill-button:hover + .skills-box{
+  opacity: 1;
+  bottom: 2%;
+}
+.tech-skills{
+  word-wrap: break-word;
+}
+
+.contact-me{
+  display: flex;
+  /* width: 70%; */
+  opacity: 0;
+  position: absolute;
+  top: 124vh;
+  max-width: min-content;
+  padding: 1%;
+  right: 7%;
+  color: white;
+  background-color: #f6f4f428;
+  /* box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0); */
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(4.5px);
+  border: 2px solid gray;
+  border-radius: 10px;
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+}
+
+.contact-button:hover + .contact-me{
+  opacity: 1;
+  top: 122vh;
 }
