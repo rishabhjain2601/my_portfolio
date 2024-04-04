@@ -65,7 +65,7 @@ canvas {
   /* margin-top: 10px; */
   max-width: 450px;
   margin-right: 80px;
-  left: 12%;
+  left: 8%;
   top: 10px;
   padding: 20px;
   opacity: 0;
@@ -113,7 +113,7 @@ canvas {
   position: absolute;
   display: none;
   opacity: 1;
-  top: 910px;
+  /* margin-top: 30px; */
   left: 5%;
   z-index: 50;
   padding-top: 10px;
@@ -159,15 +159,7 @@ canvas {
   position: absolute;
   z-index: 222;
 } */
-.pb {
-  /* position: fixed; */
-  z-index: 29;
-  /* top: 190px; */
-  margin-top: 300px;
-  margin-left: 12%;
-  border-radius: 10%;
-  border-radius: 100px;
-}
+
 button {
   /* position: absolute; */
   /* z-index: 20; */
@@ -178,6 +170,8 @@ button {
   border-radius: 10%;
   border-radius: 100px;
   color: white;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: medium;
   border: 2px solid rgba(255, 255, 255, 0.556);
   background-color: #ffffff16;
   transition: all 0.3s ease;
@@ -210,17 +204,22 @@ button:hover {
   opacity: 1;
   z-index: 30;
 }
-
-.about-button {
-  position: absolute;
-  margin-top: 200px;
+.pb {
+  /* position: fixed; */
+  z-index: 29;
+  /* top: 190px; */
+  margin-top: 300px;
+  margin-left: 8%;
+  border-radius: 10%;
+  border-radius: 100px;
 }
 
 .about button {
   position: relative;
   top: 0;
+  margin-top: 200px;
   z-index: 25;
-  margin-left: 12%;
+  margin-left: 8%;
 }
 
 .projects {
@@ -238,7 +237,7 @@ button:hover {
   top: 550px;
   right: 0;
   /* margin-left: 80%; */
-  margin-right: 10%;
+  margin-right:6%;
   z-index: 21;
   /* margin-top: 55vh; */
 }
@@ -248,7 +247,7 @@ button:hover {
   right: 0;
   top: 1250px;
   /* margin-left: 80%; */
-  margin-right: 10%;
+  margin-right: 6%;
   z-index: 21;
 }
 
@@ -263,8 +262,8 @@ button:hover {
 .skill-set2 {
   display: flex;
   margin-top: 8px;
-  margin-left: 8%;
-
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .skills-box {
@@ -273,8 +272,9 @@ button:hover {
   opacity: 0;
   position: absolute;
   max-width: min-content;
+  min-width: 30vw;
   padding: 1%;
-  top: 185px;
+  top: 240px;
   margin-left: 50px;
   right: 20px;
   color: white;
@@ -291,35 +291,48 @@ button:hover {
 .skill{
   margin-right: auto;
   margin-left: auto;
+  padding: 1px;
   text-align: center;
 }
 .skills{
   margin-right: 8px;
 }
-
+h3{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.skill img{
+  width: 60px;
+}
 .skill-button:hover + .skills-box{
   opacity: 1;
-  top: 155px;
+  top: 220px;
   z-index: 25;
 }
 .tech-skills{
   word-wrap: break-word;
 }
-
-h3{
-  margin-left: auto;
+.skills-box{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+.contact h3{
+  text-align: center;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .contact-me{
   display: flex;
   /* width: 70%; */
   opacity: 0;
+  display: flex;
+  visibility: hidden;
   position: absolute;
   z-index: -2;
   top: 1110px;
-  max-width: min-content;
+  /* max-width: min-content; */
+  width: fit-content;
   padding: 1%;
-  right: 7%;
+  padding-right: 40px;
+  right: 3%;
   color: white;
   background-color: #f6f4f428;
   /* box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0); */
@@ -335,9 +348,17 @@ h3{
 .contact-button:hover + .contact-me{
   opacity: 1;
   top: 1100px;
+  visibility: visible;
 }
 
 .contact-me:hover{
   opacity: 1;
   top: 1100px;
+  visibility: visible;
+}
+.contact-me img{
+  width: 80px;
+}
+.detail{
+  margin: 1%;
 }
