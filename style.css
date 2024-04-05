@@ -41,6 +41,97 @@ body {
   background: url("./Images/bg2.jpg") repeat;
   animation: animateBg 50s linear;
 }
+.star{
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 4px;
+  height: 4px;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.1),
+  0 0 0 8px rgba(255, 255, 255, 0.1), 
+  0 0 20px rgba(255, 255, 255, 1);
+  animation: animateSpan 3s linear infinite;
+}
+.star::before{
+  content: '';
+  position: absolute;
+  top: 0%;
+  width: 300px;
+  border-radius: 50%;
+  height: 1px;
+  background: linear-gradient(90deg,#fff, transparent);
+}
+.star:nth-child(1){
+  top: 0;
+  left: 400px;
+  animation-delay: 0;
+  animation-duration: 4s;
+}
+.star:nth-child(2){
+  top: 0;
+  left: 550px;
+  animation-delay: 1.2s;
+  animation-duration: 5s;
+}
+.star:nth-child(3){
+  top: 0;
+  left: 1900px;
+  animation-delay: 0.1s;
+  animation-duration: 4s;
+}
+.star:nth-child(4){
+  top: 0;
+  right: 900px;
+  animation-delay: 2.4s;
+  animation-duration: 2s;
+}
+.star:nth-child(5){
+  top: 0;
+  left: 1190px;
+  animation-delay: 0.2s;
+  animation-duration: 5s;
+}
+.star:nth-child(6){
+  top: 0;
+  left: 1400px;
+  animation-delay: 3.7s;
+  animation-duration: 4s;
+}
+.star:nth-child(7){
+  top: 0;
+  left: 1600px;
+  animation-delay: 1.9s;
+  animation-duration: 3s;
+}
+.star:nth-child(8){
+  top: 400px;
+  left: 2200px;
+  animation-delay: 4.1s;
+  animation-duration: 3s;
+}
+.star:nth-child(9){
+  top: 300px;
+  left: 1900px;
+  animation-delay: 2.2s;
+  animation-duration: 4s;
+}
+.star:nth-child(10){
+  top: 500px;
+  left: 2500px;
+  animation-delay: 1.5s;
+  animation-duration: 5s;
+}
+
+@keyframes animateSpan {
+  0%{
+    transform: rotate(325deg) translateX(0);
+  }
+  100%{
+    transform: rotate(325deg) translateX(-3000px);
+  }
+}
 
 @keyframes animateBg {
   0%,
@@ -312,7 +403,7 @@ h3{
   word-wrap: break-word;
 }
 .skills-box{
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 .contact h3{
   text-align: center;
