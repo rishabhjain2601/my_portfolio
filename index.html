@@ -11,10 +11,8 @@
 </head>
 
 <body>
+    <canvas></canvas>
     <div id="main">
-        <div id="page">
-            <canvas></canvas>
-        </div>
         <div id="page1">
             <span class="star"></span>
             <span class="star"></span>
@@ -31,11 +29,12 @@
             <div class="about">
                 <button class="about-button">About Me</button>
                 <h4 class="about-me">
-                    Hey there! I'm Rishabh Jain, a 3rd year ECE undergraduate at Delhi Technological University. I'm
-                    passionate about web development and proficient in ReactJS, Tailwind CSS, JavaScript, NodeJS, and
-                    ExpressJS. Alongside my technical skills, I love networking and socializing, always eager to connect
-                    with others. Currently seeking freelance projects to further enhance my skills and contribute to
-                    exciting ventures. Let's collaborate and create something awesome together!
+                    Hey there! I'm Rishabh Jain, an ECE graduate from Delhi Technological University. I'm passionate
+                    about full-stack web development and proficient in ReactJS, Tailwind CSS, JavaScript, NodeJS,
+                    ExpressJS, Django, Docker, and much more. Alongside my technical skills, I love networking and
+                    socializing, always eager to connect with others. Currently seeking freelance projects to further
+                    enhance my skills and contribute to exciting ventures. Let's collaborate and create something
+                    awesome together!
                 </h4>
             </div>
             <div class="skills">
@@ -81,6 +80,10 @@
                             <img src="./Icons/mongodb.png" alt="">
                             <h3 class="skill-name">MongoDB</h3>
                         </div>
+                        <div class="skill">
+                            <img src="./Icons/python.png" alt="">
+                            <h3 class="skill-name">Python</h3>
+                        </div>
                     </div>
                     <br>
                     <h5 class="tech_skills">
@@ -89,35 +92,109 @@
                     </h5>
                 </div>
             </div>
-            <div class="accordian">
+            <div class="projects-section">
                 <button class="pb">Projects</button>
-                <div class="accordian1">
-                    <ul>
-                        <li>
-                            <div class="image_title">
-                                <a href="https://upskill-me.vercel.app/">Upskill Me</a>
+                <div class="projects-container">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="./Images/project1.png" alt="Upskill Me Project" />
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://upskill-me.vercel.app/" class="project-link" target="_blank">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                            <polyline points="15,3 21,3 21,9"></polyline>
+                                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                                        </svg>
+                                    </a>
+                                </div>
                             </div>
-                            <a href="https://upskill-me.vercel.app/">
-                                <img src="./Images/project1.png" />
-                            </a>
-                        </li>
-                        <li>
-                            <div class="image_title">
-                                <a href="https://eventus.social/">Eventus</a>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Upskill Me</h3>
+                            <p class="project-description">A comprehensive learning platform for career development and skill enhancement.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">MongoDB</span>
                             </div>
-                            <a href="https://eventus.social/">
-                                <img src="./Images/project2.png" />
-                            </a>
-                        </li>
-                        <li>
-                            <div class="image_title">
-                                <a href="https://indianrecruitmentservices.com/">Indian Recruitment Services</a>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="./Images/project2.png" alt="Eventus Project" />
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://eventik.netlify.app/" class="project-link" target="_blank">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                            <polyline points="15,3 21,3 21,9"></polyline>
+                                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                                        </svg>
+                                    </a>
+                                </div>
                             </div>
-                            <a href="https://indianrecruitmentservices.com/">
-                                <img class="abc" src="./Images/project3.png" />
-                            </a>
-                        </li>
-                    </ul>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Eventus</h3>
+                            <p class="project-description">Social event management platform connecting people through memorable experiences.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">Express</span>
+                                <span class="tech-tag">CSS</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="./Images/project3.png" alt="Indian Recruitment Services Project" />
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://indianrecruitmentservices.com/" class="project-link" target="_blank">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                            <polyline points="15,3 21,3 21,9"></polyline>
+                                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Indian Recruitment Services</h3>
+                            <p class="project-description">Professional recruitment platform connecting talent with opportunities across India.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">Tailwind</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="./Images/project4.png" alt="Bytefolio Project" />
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://bytefolio.tech/" class="project-link" target="_blank">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                            <polyline points="15,3 21,3 21,9"></polyline>
+                                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Bytefolio</h3>
+                            <p class="project-description">Developed a modern, responsive website for an IT consulting agency, showcasing their expertise in web development, custom solutions, and mobile apps to drive digital excellence.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">Tailwind</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="contact">
@@ -151,8 +228,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"
         integrity="sha512-AMl4wfwAmDM1lsQvVBBRHYENn1FR8cfOTpt8QVbb/P55mYOdahHD4LmHM1W55pNe3j/3od8ELzPf/8eNkkjISQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="script.js"></script>
-    <script src="script2.js"></script>
+    <script src="optimized-script.js"></script>
 </body>
 
 </html>

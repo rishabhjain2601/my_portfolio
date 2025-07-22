@@ -6,37 +6,42 @@
 }
 html,
 body {
-  height: 1500px;
+  height: 200vh;
   width: 100%;
-  overflow-y: scroll;
+  overflow-x: hidden;
 }
 #main {
-  height: 100%;
+  height: 200vh;
   position: relative;
-  z-index: 1;
+  z-index: 0;
   overflow: hidden;
 }
-#page {
-  position: relative;
-  justify-content: center;
-  z-index: 200;
-  height: 100%;
-  width: 100vw;
-  background-color: #ba0f0f00;
+
+canvas {
+  position: fixed !important;
+  bottom: 0 !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  z-index: 1 !important;
+  width: 80vw !important;
+  height: auto !important;
+  pointer-events: none !important;
+  display: block !important;
 }
+
 #page0 {
   position: absolute;
   top: 0;
   z-index: 210;
-  /* height: 200vh; */
+  height: 200vh;
   width: 100%;
   /* background-color: rgba(199, 232, 31, 0); */
 }
 #page1 {
-  position: absolute;
+  position: fixed;
   top: 0;
-  z-index: 70;
-  height: 100%;
+  z-index: -1;
+  height: 200vh;
   width: 100vw;
   background: url("./Images/bg2.jpg") repeat;
   animation: animateBg 50s linear;
@@ -142,17 +147,10 @@ body {
     transform: scale(1.2);
   }
 }
-canvas {
-  position: fixed;
-  left: 70%;
-  z-index: 40;
-  max-width: 100vw;
-  max-height: 100vh;
-}
 
 .about-me {
   position: relative;
-  z-index: 0;
+  z-index: 100;
   /* margin-top: 10px; */
   max-width: 450px;
   margin-right: 80px;
@@ -170,90 +168,182 @@ canvas {
   border-radius: 10px;
 }
 
-.accordian {
-  /* position: relative; */
+/* Projects Section Styles */
+.projects-section {
   max-width: 100%;
-  /* height: 320px; */
   overflow: hidden;
-  /* z-index: 115; */
+  margin-top: -120px;
 }
 
-.accordian li {
-  position: relative;
-  width: 25%;
-  float: left;
-  z-index: -100;
-  /* z-index: 50; */
-  border-left: 1px solid #888;
-
-  /* box-shadow: 0 0 25px 1px rgba(0, 0, 0, 0.5); */
-  /* -webkit-box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.5);
-  -moz-box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.5); */
-
-  /*Transitions to give animation effect*/
-  transition: all 0.5s ease;
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  /*If you hover on the images now you should be able to 
-	see the basic accordian*/
-  background: rgba(246, 246, 246, 0.448);
-}
-
-.accordian1 {
-  /* background: rgba(183, 183, 183, 0.448); */
-  position: absolute;
+.projects-container {
   display: none;
-  opacity: 1;
-  /* margin-top: 30px; */
+  opacity: 0;
+  position: absolute;
   left: 5%;
-  z-index: 50;
-  padding-top: 10px;
+  right: 5%;
+  z-index: 150;
+  padding-top: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  overflow-x: auto;
+  gap: 30px;
+  scroll-behavior: smooth;
   transition: all 0.5s ease;
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
 }
-/*Reduce with of un-hovered elements*/
-.accordian ul:hover li {
-  width: 10%;
-}
-/*Lets apply hover effects now*/
-/*The LI hover style should override the UL hover style*/
-.accordian ul li:hover {
-  width: 70%;
-}
 
-.accordian li img {
-  display: block;
-  max-height: 80vw;
-  /* width: 40vw; */
+.project-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  z-index: 100;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
   position: relative;
-  z-index: -100;
-  /* height: 500px; */
+  min-width: 350px;
 }
 
-/*Image title styles*/
-.image_title {
-  background: rgba(0, 0, 0, 0.5);
+.project-card::before {
+  content: '';
   position: absolute;
+  z-index: 100;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transition: left 0.5s ease;
+}
+
+.project-card:hover::before {
+  left: 100%;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.project-image {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-image img {
+  transform: scale(1.05);
+}
+
+.project-overlay {
+  position: absolute;
+  top: 0;
   left: 0;
+  right: 0;
   bottom: 0;
-  width: 672px;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
-.image_title a {
-  display: block;
-  color: #fff;
+
+.project-card:hover .project-overlay {
+  opacity: 1;
+}
+
+.project-links {
+  display: flex;
+  gap: 15px;
+}
+
+.project-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  color: white;
   text-decoration: none;
-  padding: 20px;
-  font-size: 16px;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
 }
-/* .abc{
-  position: absolute;
-  z-index: 222;
-} */
+
+.project-link:hover {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: scale(1.1);
+}
+
+.project-content {
+  padding: 25px;
+  color: white;
+}
+
+.project-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: white;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.project-description {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: rgba(255, 255, 255, 0.8);
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tech-tag {
+  padding: 6px 12px;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  font-size: 0.8rem;
+  color: white;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.tech-tag:hover {
+  background: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.pb:hover + .projects-container,
+.projects-container:hover {
+  opacity: 1;
+  display: flex;
+  z-index: 150;
+  cursor: pointer;
+}
 
 button {
   /* position: absolute; */
-  /* z-index: 20; */
+  z-index: 200;
   width: 200px;
   height: 75px;
   border: none;
@@ -277,29 +367,15 @@ button:hover {
   background-color: #8a898991;
 }
 
-.pb:hover + .accordian1 {
-  opacity: 1;
-  /* position: relative; */
-  display: block;
-  z-index: 50;
-  cursor: pointer;
-}
-.accordian1:hover {
-  display: block;
-  opacity: 1;
-  z-index: 50;
-  /* position: relative; */
-}
-
 .about-button:hover + .about-me {
   opacity: 1;
-  z-index: 30;
+  z-index: 200;
 }
 .pb {
   /* position: fixed; */
   z-index: 29;
   /* top: 190px; */
-  margin-top: 300px;
+  margin-top: 50vh;
   margin-left: 8%;
   border-radius: 10%;
   border-radius: 100px;
@@ -308,8 +384,8 @@ button:hover {
 .about button {
   position: relative;
   top: 0;
-  margin-top: 200px;
-  z-index: 25;
+  margin-top: 30vh;
+  z-index: 250;
   margin-left: 8%;
 }
 
@@ -319,13 +395,13 @@ button:hover {
   /* top: 0; */
   /* margin-top: 750px; */
   margin-left: 12%;
-  z-index: 21;
+  z-index: 210;
   height: 40%;
 }
 
 .skills button {
   position: absolute;
-  top: 550px;
+  top: 76vh;
   right: 0;
   /* margin-left: 80%; */
   margin-right:6%;
@@ -336,7 +412,7 @@ button:hover {
 .contact button {
   position: absolute;
   right: 0;
-  top: 1250px;
+  bottom: 150px;
   /* margin-left: 80%; */
   margin-right: 6%;
   z-index: 21;
@@ -418,7 +494,7 @@ h3{
   visibility: hidden;
   position: absolute;
   z-index: -2;
-  top: 1110px;
+  bottom: 200px;
   /* max-width: min-content; */
   width: fit-content;
   padding: 1%;
@@ -438,13 +514,13 @@ h3{
 
 .contact-button:hover + .contact-me{
   opacity: 1;
-  top: 1100px;
+  bottom: 240px;
   visibility: visible;
 }
 
 .contact-me:hover{
   opacity: 1;
-  top: 1100px;
+  bottom: 240px;
   visibility: visible;
 }
 .contact-me img{
@@ -452,4 +528,57 @@ h3{
 }
 .detail{
   margin: 1%;
+}
+
+/* Responsive Design for Projects */
+@media (max-width: 768px) {
+  .projects-container {
+    left: 2%;
+    right: 2%;
+    gap: 15px;
+  }
+  
+  .project-card {
+    min-width: 280px;
+  }
+  
+  .project-image {
+    height: 200px;
+  }
+  
+  .project-content {
+    padding: 20px;
+  }
+  
+  .project-title {
+    font-size: 1.3rem;
+  }
+  
+  .project-description {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .projects-container {
+    left: 1%;
+    right: 1%;
+    gap: 15px;
+  }
+  
+  .project-card {
+    min-width: 260px;
+  }
+  
+  .project-image {
+    height: 180px;
+  }
+  
+  .project-content {
+    padding: 15px;
+  }
+  
+  .project-title {
+    font-size: 1.2rem;
+  }
 }
