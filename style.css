@@ -46,7 +46,7 @@ canvas {
   background: url("./Images/bg2.jpg") repeat;
   animation: animateBg 50s linear;
 }
-.star{
+.star {
   position: absolute;
   top: 0;
   left: 50%;
@@ -55,74 +55,73 @@ canvas {
   background: white;
   border-radius: 50%;
   box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.1),
-  0 0 0 8px rgba(255, 255, 255, 0.1), 
-  0 0 20px rgba(255, 255, 255, 1);
+    0 0 0 8px rgba(255, 255, 255, 0.1), 0 0 20px rgba(255, 255, 255, 1);
   animation: animateSpan 3s linear infinite;
 }
-.star::before{
-  content: '';
+.star::before {
+  content: "";
   position: absolute;
   top: 0%;
   width: 300px;
   border-radius: 50%;
   height: 1px;
-  background: linear-gradient(90deg,#fff, transparent);
+  background: linear-gradient(90deg, #fff, transparent);
 }
-.star:nth-child(1){
+.star:nth-child(1) {
   top: 0;
   left: 400px;
   animation-delay: 0;
   animation-duration: 4s;
 }
-.star:nth-child(2){
+.star:nth-child(2) {
   top: 0;
   left: 550px;
   animation-delay: 1.2s;
   animation-duration: 5s;
 }
-.star:nth-child(3){
+.star:nth-child(3) {
   top: 0;
   left: 1900px;
   animation-delay: 0.1s;
   animation-duration: 4s;
 }
-.star:nth-child(4){
+.star:nth-child(4) {
   top: 0;
   right: 900px;
   animation-delay: 2.4s;
   animation-duration: 2s;
 }
-.star:nth-child(5){
+.star:nth-child(5) {
   top: 0;
   left: 1190px;
   animation-delay: 0.2s;
   animation-duration: 5s;
 }
-.star:nth-child(6){
+.star:nth-child(6) {
   top: 0;
   left: 1400px;
   animation-delay: 3.7s;
   animation-duration: 4s;
 }
-.star:nth-child(7){
+.star:nth-child(7) {
   top: 0;
   left: 1600px;
   animation-delay: 1.9s;
   animation-duration: 3s;
 }
-.star:nth-child(8){
+.star:nth-child(8) {
   top: 400px;
   left: 2200px;
   animation-delay: 4.1s;
   animation-duration: 3s;
 }
-.star:nth-child(9){
+.star:nth-child(9) {
   top: 300px;
   left: 1900px;
   animation-delay: 2.2s;
   animation-duration: 4s;
 }
-.star:nth-child(10){
+.star:nth-child(10) {
   top: 500px;
   left: 2500px;
   animation-delay: 1.5s;
@@ -130,10 +129,10 @@ canvas {
 }
 
 @keyframes animateSpan {
-  0%{
+  0% {
     transform: rotate(325deg) translateX(0);
   }
-  100%{
+  100% {
     transform: rotate(325deg) translateX(-3000px);
   }
 }
@@ -159,7 +158,7 @@ canvas {
   padding: 20px;
   opacity: 0;
   color: rgb(203 233 255);
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   word-spacing: 6px;
   background-color: #ffffff16;
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0);
@@ -207,14 +206,19 @@ canvas {
 }
 
 .project-card::before {
-  content: '';
+  content: "";
   position: absolute;
   z-index: 100;
   top: 0;
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
   transition: left 0.5s ease;
 }
 
@@ -300,7 +304,8 @@ canvas {
   font-weight: bold;
   margin-bottom: 10px;
   color: white;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
 
 .project-description {
@@ -308,7 +313,8 @@ canvas {
   line-height: 1.6;
   margin-bottom: 20px;
   color: rgba(255, 255, 255, 0.8);
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
 
 .project-tech {
@@ -351,7 +357,7 @@ button {
   border-radius: 10%;
   border-radius: 100px;
   color: white;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-size: medium;
   border: 2px solid rgba(255, 255, 255, 0.556);
   background-color: #ffffff16;
@@ -404,8 +410,8 @@ button:hover {
   top: 76vh;
   right: 0;
   /* margin-left: 80%; */
-  margin-right:6%;
-  z-index: 21;
+  margin-right: 6%;
+  z-index: 121;
   /* margin-top: 55vh; */
 }
 
@@ -432,6 +438,12 @@ button:hover {
   margin-left: auto;
   margin-right: auto;
 }
+.skill-set3 {
+  display: flex;
+  margin-top: 8px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 .skills-box {
   display: block;
@@ -441,7 +453,7 @@ button:hover {
   max-width: min-content;
   min-width: 30vw;
   padding: 1%;
-  top: 240px;
+  top: 220px;
   margin-left: 50px;
   right: 20px;
   color: white;
@@ -455,38 +467,41 @@ button:hover {
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
 }
-.skill{
+.skill {
   margin-right: auto;
   margin-left: auto;
   padding: 1px;
   text-align: center;
 }
-.skills{
+.skills {
   margin-right: 8px;
 }
-h3{
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+h3 {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
-.skill img{
+.skill img {
   width: 60px;
 }
-.skill-button:hover + .skills-box{
+.skill-button:hover + .skills-box {
   opacity: 1;
-  top: 220px;
-  z-index: 25;
+  top: 280px;
+  z-index: 125;
 }
-.tech-skills{
+.tech-skills {
   word-wrap: break-word;
 }
-.skills-box{
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+.skills-box {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
-.contact h3{
+.contact h3 {
   text-align: center;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
-.contact-me{
+.contact-me {
   display: flex;
   /* width: 70%; */
   opacity: 0;
@@ -512,21 +527,21 @@ h3{
   -moz-transition: all 0.5s;
 }
 
-.contact-button:hover + .contact-me{
+.contact-button:hover + .contact-me {
   opacity: 1;
   bottom: 240px;
   visibility: visible;
 }
 
-.contact-me:hover{
+.contact-me:hover {
   opacity: 1;
   bottom: 240px;
   visibility: visible;
 }
-.contact-me img{
+.contact-me img {
   width: 80px;
 }
-.detail{
+.detail {
   margin: 1%;
 }
 
@@ -537,23 +552,23 @@ h3{
     right: 2%;
     gap: 15px;
   }
-  
+
   .project-card {
     min-width: 280px;
   }
-  
+
   .project-image {
     height: 200px;
   }
-  
+
   .project-content {
     padding: 20px;
   }
-  
+
   .project-title {
     font-size: 1.3rem;
   }
-  
+
   .project-description {
     font-size: 0.9rem;
   }
@@ -565,19 +580,19 @@ h3{
     right: 1%;
     gap: 15px;
   }
-  
+
   .project-card {
     min-width: 260px;
   }
-  
+
   .project-image {
     height: 180px;
   }
-  
+
   .project-content {
     padding: 15px;
   }
-  
+
   .project-title {
     font-size: 1.2rem;
   }
